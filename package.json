@@ -1,0 +1,29 @@
+{
+  "name": "asset-compass",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^22.19.0 || ^24.11.0 || >=26.0.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev --host 127.0.0.1",
+    "build": "nuxt build",
+    "start": "NITRO_HOST=127.0.0.1 node .output/server/index.mjs",
+    "typecheck": "nuxt typecheck",
+    "test": "node --disable-warning=ExperimentalWarning --experimental-strip-types --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.5.0",
+    "fflate": "^0.8.2",
+    "nuxt": "^4.2.2",
+    "undici": "^7.16.0",
+    "vue": "^3.5.24",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "typescript": "~5.9.3",
+    "vue-tsc": "^3.1.5"
+  }
+}

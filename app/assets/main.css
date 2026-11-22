@@ -1,0 +1,1331 @@
+#asset-compass {
+  color-scheme: light dark;
+  --paper: light-dark(#f5f5ef, #181f1c);
+  --surface: light-dark(#fffffc, #222b26);
+  --ink: light-dark(#162e25, #e3eee5);
+  --text: light-dark(#34433b, #d8e0d9);
+  --muted: light-dark(#647269, #a5b6a8);
+  --line: light-dark(#daddd2, #39483c);
+  --soft: light-dark(#eef1e9, #2e3930);
+  --active: light-dark(#dce9d7, #405243);
+  --up: light-dark(#b63d34, #ff9d93);
+  --down: light-dark(#167247, #83d6a6);
+  --cta: light-dark(#174a37, #bde3ac);
+  --on-cta: light-dark(#fff, #183326);
+  --body-font: 'DM Sans', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  --digits: 'IBM Plex Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  background: var(--paper);
+  color: var(--text);
+  font: 14px/1.5 var(--body-font);
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+#asset-compass *,
+#asset-compass *::before,
+#asset-compass *::after {
+  box-sizing: border-box;
+}
+#asset-compass [hidden] {
+  display: none !important;
+}
+#asset-compass h1,
+#asset-compass h2,
+#asset-compass h3,
+#asset-compass p {
+  margin: 0;
+}
+#asset-compass button,
+#asset-compass input,
+#asset-compass select {
+  font: inherit;
+  color: inherit;
+}
+#asset-compass button {
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+#asset-compass button:focus-visible,
+#asset-compass input:focus-visible,
+#asset-compass select:focus-visible {
+  outline: 3px solid #869e42;
+  outline-offset: 3px;
+}
+#asset-compass h1,
+#asset-compass h2,
+#asset-compass h3 {
+  color: var(--ink);
+}
+#asset-compass .ac-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+#asset-compass .ac-bar,
+#asset-compass .ac-main {
+  max-width: 1376px;
+  margin: 0 auto;
+  padding-left: 4.5%;
+  padding-right: 4.5%;
+}
+#asset-compass .ac-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+#asset-compass .ac-bar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+#asset-compass .ac-brand {
+  display: flex;
+  align-items: center;
+  color: var(--ink);
+  font:
+    600 24px/1 'DM Sans',
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  letter-spacing: -1.35px;
+  white-space: nowrap;
+}
+#asset-compass .ac-logo {
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  background: #194b38;
+  transform: rotate(29deg);
+}
+#asset-compass .ac-logo::before,
+#asset-compass .ac-logo::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  width: 10px;
+  height: 13px;
+}
+#asset-compass .ac-logo::before {
+  top: 4px;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: #d3ef98;
+}
+#asset-compass .ac-logo::after {
+  bottom: 4px;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  background: #f4f5df;
+}
+#asset-compass .ac-nav {
+  align-self: stretch;
+  display: flex;
+  margin-left: 52px;
+}
+#asset-compass .ac-nav button {
+  margin-right: 28px;
+  color: var(--muted);
+  position: relative;
+  font-size: 14px;
+}
+#asset-compass .ac-nav .ac-nav-current {
+  color: var(--ink);
+  font-weight: 650;
+}
+#asset-compass .ac-nav .ac-nav-current::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  left: 0;
+  right: 0;
+  background: var(--cta);
+  border-radius: 2px;
+}
+#asset-compass .ac-snapshot {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: 12px;
+}
+#asset-compass .ac-status-dot {
+  background: #6a9160;
+  border-radius: 100%;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+}
+#asset-compass .ac-stamp {
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 1px solid var(--line);
+  font: 12px var(--digits);
+  color: var(--text);
+}
+#asset-compass .ac-main {
+  padding-bottom: 30px;
+}
+#asset-compass .ac-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0 24px;
+}
+#asset-compass h1 {
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 670;
+  line-height: 1.25;
+  letter-spacing: -1.9px;
+}
+#asset-compass .ac-intro p {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 7px;
+}
+#asset-compass button.ac-primary {
+  background: var(--cta);
+  color: var(--on-cta);
+  border-radius: 8px;
+  padding: 10px 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+#asset-compass .ac-primary span {
+  font: 20px/1 var(--body-font);
+  margin-right: 6px;
+}
+#asset-compass .ac-primary:hover {
+  filter: brightness(1.1);
+}
+#asset-compass .ac-panels {
+  display: flex;
+  align-items: stretch;
+}
+#asset-compass .ac-chart-card,
+#asset-compass .ac-list {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+#asset-compass .ac-chart-card {
+  flex: 2.12;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#asset-compass .ac-chart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 25px 0;
+}
+#asset-compass h2 {
+  font-size: 21px;
+  letter-spacing: -0.65px;
+  line-height: 1.4;
+  font-weight: 640;
+}
+#asset-compass .ac-caption {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 3px;
+}
+#asset-compass .ac-periods {
+  display: flex;
+  border: 1px solid var(--line);
+  background: var(--soft);
+  border-radius: 7px;
+  padding: 3px;
+}
+#asset-compass .ac-periods button {
+  min-width: 42px;
+  padding: 3px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+#asset-compass .ac-periods [aria-pressed='true'] {
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 1px 4px #0002;
+  font-weight: 650;
+}
+#asset-compass .ac-legend {
+  display: flex;
+  margin: 18px 25px 9px;
+  min-height: 45px;
+}
+#asset-compass .ac-key {
+  padding-right: 25px;
+  min-width: 0;
+}
+#asset-compass .ac-key + .ac-key {
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+}
+#asset-compass .ac-key-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+#asset-compass .ac-swatch {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-right: 7px;
+  flex: none;
+}
+#asset-compass .ac-key strong {
+  display: block;
+  color: var(--ink);
+  font: 500 clamp(18px, 1.76vw, 25px) / 1.3 var(--digits);
+  letter-spacing: -1.4px;
+  margin-top: 3px;
+  white-space: nowrap;
+}
+#asset-compass .ac-plot {
+  height: 176px;
+  margin: 1px 23px 4px 19px;
+  position: relative;
+}
+#asset-compass .ac-art canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#asset-compass .ac-chart-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 8px 25px 11px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+#asset-compass #ac-chart-dates {
+  font: 11px/1.6 var(--digits);
+}
+#asset-compass .ac-text-btn {
+  font-size: 12px;
+  color: var(--up);
+}
+#asset-compass .ac-text-btn span {
+  margin-right: 3px;
+  font-size: 16px;
+}
+#asset-compass .ac-feature {
+  margin-left: 17px;
+  position: relative;
+  isolation: isolate;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 21px 24px 18px;
+  border-radius: 14px;
+  background: radial-gradient(ellipse at 76% 47%, #275a43 0%, #184532 48%, #123a2c 89%);
+  color: #edf4e7;
+}
+#asset-compass .ac-feature-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 25px;
+}
+#asset-compass .ac-focus-label {
+  display: flex;
+  align-items: center;
+  color: #d4e5d5;
+  font-size: 12px;
+  font-weight: 520;
+}
+#asset-compass .ac-focus-label i {
+  border: 1px solid #c2dc9e;
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  margin-right: 7px;
+  position: relative;
+}
+#asset-compass .ac-focus-label i::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: #c8e697;
+}
+#asset-compass .ac-feature h2 {
+  color: #f0f5e7;
+  font-size: 29px;
+  margin-top: 8px;
+  line-height: 1.25;
+  letter-spacing: -1.3px;
+}
+#asset-compass .ac-focus-meta {
+  margin-top: 4px;
+  color: #bbd0bd;
+  font: 12px/1.6 var(--digits);
+}
+#asset-compass .ac-art {
+  flex: 1;
+  position: relative;
+  min-height: 136px;
+  margin: 0 -24px;
+}
+#asset-compass .ac-focus-stats {
+  display: flex;
+  padding-top: 14px;
+  border-top: 1px solid #a2bf9a45;
+}
+#asset-compass .ac-focus-stats div {
+  width: 50%;
+}
+#asset-compass .ac-focus-stats div + div {
+  border-left: 1px solid #a2bf9a45;
+  padding-left: 20px;
+}
+#asset-compass .ac-focus-stats small {
+  display: block;
+  font-size: 11px;
+  color: #bed4c1;
+  margin-bottom: 3px;
+}
+#asset-compass .ac-focus-stats strong {
+  color: #e7f2ce;
+  font: 500 23px/1.25 var(--digits);
+  letter-spacing: -1.2px;
+}
+#asset-compass .ac-list {
+  margin-top: 22px;
+  overflow: hidden;
+}
+#asset-compass .ac-list-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 23px;
+}
+#asset-compass .ac-list-title,
+#asset-compass .ac-filters {
+  display: flex;
+  align-items: center;
+}
+#asset-compass .ac-list-title span {
+  margin-left: 9px;
+  border-radius: 6px;
+  padding: 1px 7px;
+  background: var(--soft);
+  font: 12px/1.6 var(--digits);
+  color: var(--muted);
+}
+#asset-compass .ac-filters button {
+  padding: 4px 11px;
+  margin-left: 3px;
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+#asset-compass .ac-filters [aria-pressed='true'] {
+  background: var(--soft);
+  color: var(--ink);
+  font-weight: 650;
+}
+#asset-compass .ac-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  font-size: 13px;
+  margin: 0;
+}
+#asset-compass .ac-table th,
+#asset-compass .ac-table td {
+  border: 0;
+  text-align: left;
+  vertical-align: middle;
+  padding: 8px 11px;
+}
+#asset-compass .ac-table th {
+  font-weight: 500;
+  color: var(--muted);
+  font-size: 11px;
+  background: var(--soft);
+  height: 32px;
+  white-space: nowrap;
+}
+#asset-compass .ac-table tr > *:first-child {
+  padding-left: 24px;
+}
+#asset-compass .ac-table tr > *:last-child {
+  padding-right: 20px;
+  width: 40px;
+}
+#asset-compass .ac-table tbody tr + tr {
+  border-top: 1px solid var(--line);
+}
+#asset-compass .ac-table tbody tr:hover {
+  background: var(--soft);
+}
+#asset-compass .ac-table .ac-number-col {
+  text-align: right;
+}
+#asset-compass .ac-table .ac-method-col {
+  padding-left: 5%;
+}
+#asset-compass .ac-asset-btn {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  min-height: 37px;
+  max-width: 100%;
+}
+#asset-compass .ac-glyph {
+  display: inline-block;
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  margin-right: 11px;
+}
+#asset-compass .ac-asset-label {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+#asset-compass .ac-asset-name {
+  font-size: 14px;
+  font-weight: 620;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+#asset-compass .ac-symbol {
+  color: var(--muted);
+  font: 10.8px/1.5 var(--digits);
+  letter-spacing: 0.35px;
+}
+#asset-compass .ac-tag {
+  background: var(--soft);
+  color: var(--text);
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+#asset-compass .ac-spark {
+  display: block;
+  width: 92px;
+  height: 26px;
+}
+#asset-compass td.ac-number-col {
+  font: 13.5px var(--digits);
+  white-space: nowrap;
+}
+#asset-compass .ac-pos {
+  color: var(--up);
+}
+#asset-compass .ac-neg {
+  color: var(--down);
+}
+#asset-compass .ac-method {
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+#asset-compass .ac-row-more {
+  width: 24px;
+  height: 30px;
+  color: var(--muted);
+  font-size: 18px;
+}
+#asset-compass .ac-dialog {
+  width: min(430px, calc(100% - 28px));
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text);
+  max-height: 85vh;
+  overflow: auto;
+  box-shadow: 0 14px 60px #102b2030;
+}
+#asset-compass .ac-dialog::backdrop {
+  background: #0b201a66;
+}
+#asset-compass .ac-dialog-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+#asset-compass .ac-close {
+  border-radius: 50%;
+  background: var(--soft);
+  font-size: 20px;
+  width: 29px;
+  height: 29px;
+}
+#asset-compass .ac-fields label {
+  display: block;
+  font-size: 13px;
+  margin: 13px 0;
+}
+#asset-compass .ac-fields input,
+#asset-compass .ac-fields select {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding: 9px 10px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+#asset-compass .ac-dialog p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+#asset-compass .ac-dialog h3 {
+  font-size: 15px;
+  margin: 13px 0 3px;
+}
+#asset-compass .ac-dialog .ac-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+#asset-compass .ac-choice {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+}
+#asset-compass .ac-choice input {
+  margin: 0 10px 0 1px;
+  accent-color: var(--cta);
+  width: 16px;
+  height: 16px;
+}
+#asset-compass .ac-choice small {
+  margin-left: auto;
+  color: var(--muted);
+  font: 12px var(--digits);
+}
+@media (max-width: 1050px) {
+  #asset-compass .ac-bar,
+  #asset-compass .ac-main {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  #asset-compass .ac-key {
+    padding-right: 13px;
+  }
+  #asset-compass .ac-key + .ac-key {
+    padding-left: 13px;
+  }
+  #asset-compass .ac-table .ac-method-col {
+    padding-left: 18px;
+  }
+}
+@media (max-width: 780px) {
+  #asset-compass .ac-bar,
+  #asset-compass .ac-main {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  #asset-compass .ac-nav {
+    margin-left: 25px;
+  }
+  #asset-compass .ac-nav button {
+    margin-right: 16px;
+  }
+  #asset-compass .ac-stamp {
+    display: none;
+  }
+  #asset-compass .ac-feature {
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-left: 10px;
+  }
+  #asset-compass .ac-chart-head {
+    padding: 17px 16px 0;
+  }
+  #asset-compass .ac-legend {
+    margin-left: 16px;
+    margin-right: 10px;
+  }
+  #asset-compass .ac-plot {
+    margin-left: 8px;
+    margin-right: 10px;
+  }
+  #asset-compass .ac-chart-foot {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  #asset-compass .ac-feature h2 {
+    font-size: 24px;
+  }
+  #asset-compass .ac-focus-stats strong {
+    font-size: 19px;
+  }
+  #asset-compass .ac-focus-stats div + div {
+    padding-left: 10px;
+  }
+  #asset-compass .ac-trend-col {
+    display: none;
+  }
+  #asset-compass .ac-list-head {
+    padding: 15px;
+  }
+  #asset-compass .ac-table tr > *:first-child {
+    padding-left: 15px;
+  }
+}
+@media (max-width: 640px) {
+  #asset-compass .ac-bar {
+    height: auto;
+    min-height: 55px;
+    flex-wrap: wrap;
+    padding-top: 13px;
+  }
+  #asset-compass .ac-brand {
+    font-size: 21px;
+  }
+  #asset-compass .ac-logo {
+    width: 30px;
+    height: 30px;
+  }
+  #asset-compass .ac-logo::before,
+  #asset-compass .ac-logo::after {
+    left: 10px;
+    height: 11px;
+  }
+  #asset-compass .ac-nav {
+    order: 3;
+    width: 100%;
+    margin: 8px 0 0;
+  }
+  #asset-compass .ac-nav button {
+    padding: 7px 0 9px;
+    margin-right: 24px;
+  }
+  #asset-compass .ac-intro {
+    padding: 21px 0 17px;
+  }
+  #asset-compass .ac-intro p {
+    font-size: 12px;
+  }
+  #asset-compass .ac-panels {
+    display: block;
+  }
+  #asset-compass .ac-feature {
+    margin: 12px 0 0;
+    min-height: 180px;
+    padding: 15px 19px;
+  }
+  #asset-compass .ac-art {
+    position: absolute;
+    z-index: -1;
+    width: 49%;
+    height: 130px;
+    min-height: 0;
+    right: 0;
+    top: 25px;
+    margin: 0;
+  }
+  #asset-compass .ac-focus-stats {
+    width: 52%;
+    margin-top: 14px;
+    padding-top: 8px;
+  }
+  #asset-compass .ac-focus-stats strong {
+    font-size: 17px;
+  }
+  #asset-compass .ac-list-head {
+    flex-wrap: wrap;
+  }
+  #asset-compass .ac-filters {
+    flex-wrap: wrap;
+  }
+  #asset-compass .ac-filters button {
+    padding: 4px 7px;
+  }
+  #asset-compass .ac-category-col,
+  #asset-compass .ac-method-col {
+    display: none;
+  }
+  #asset-compass .ac-table td,
+  #asset-compass .ac-table th {
+    padding: 7px;
+  }
+  #asset-compass .ac-asset-name {
+    font-size: 13px;
+  }
+  #asset-compass td.ac-number-col {
+    font-size: 12px;
+  }
+  #asset-compass .ac-glyph {
+    width: 29px;
+    height: 29px;
+    margin-right: 6px;
+  }
+  #asset-compass .ac-table tr > *:last-child {
+    width: 22px;
+    padding-right: 5px;
+    padding-left: 0;
+  }
+}
+@media (max-width: 400px) {
+  #asset-compass .ac-main,
+  #asset-compass .ac-bar {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+  #asset-compass .ac-list-title {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  #asset-compass .ac-vol-col {
+    display: none;
+  }
+  #asset-compass .ac-key {
+    padding-right: 9px;
+  }
+  #asset-compass .ac-key + .ac-key {
+    padding-left: 9px;
+  }
+  #asset-compass .ac-focus-stats {
+    width: 59%;
+  }
+  #asset-compass .ac-list {
+    margin-top: 13px;
+  }
+  #asset-compass .ac-periods button {
+    min-width: 33px;
+  }
+  #asset-compass .ac-focus-stats small {
+    font-size: 10px;
+  }
+  #asset-compass .ac-asset-name {
+    max-width: 118px;
+  }
+}
+#asset-compass .ac-focus-open {
+  font-size: 12px;
+  color: #eff5df;
+  border: 1px solid #a8c0a666;
+  border-radius: 5px;
+  padding: 4px 8px;
+}
+#asset-compass .ac-text-btn,
+#asset-compass .ac-row-more {
+  color: var(--cta);
+}
+#asset-compass .ac-key strong.ac-pos {
+  color: var(--up);
+}
+#asset-compass .ac-key strong.ac-neg {
+  color: var(--down);
+}
+#asset-compass .ac-focus-stats strong.ac-pos {
+  color: #ffafa3;
+}
+#asset-compass .ac-focus-stats strong.ac-neg {
+  color: #94e2b2;
+}
+#asset-compass .ac-row-more {
+  font-size: 12px;
+  width: auto;
+  white-space: nowrap;
+}
+#asset-compass #ac-detail-page {
+  padding: 28px 0 4px;
+}
+#asset-compass .ac-detail-layout {
+  display: flex;
+  align-items: flex-start;
+}
+#asset-compass .ac-side {
+  width: 202px;
+  flex: none;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  padding: 16px 10px 20px;
+  margin-right: 21px;
+}
+#asset-compass .ac-side-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5px 9px;
+}
+#asset-compass .ac-side-head h2 {
+  font-size: 16px;
+}
+#asset-compass .ac-side-head button {
+  background: var(--soft);
+  border-radius: 5px;
+  width: 25px;
+  height: 25px;
+}
+#asset-compass .ac-side-group h3 {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 500;
+  margin: 12px 8px 5px;
+}
+#asset-compass .ac-side-group button {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  padding: 7px 8px;
+  color: var(--text);
+}
+#asset-compass .ac-side-group button[aria-current='true'] {
+  background: var(--active);
+  border-color: var(--line);
+  box-shadow: inset 3px 0 var(--cta);
+}
+#asset-compass .ac-side .ac-glyph {
+  width: 27px;
+  height: 27px;
+  margin-right: 7px;
+  border-radius: 7px;
+}
+#asset-compass .ac-side-group b {
+  display: block;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+#asset-compass .ac-side-group small {
+  display: block;
+  color: var(--muted);
+  font: 10px/1.5 var(--digits);
+}
+#asset-compass .ac-detail-main {
+  flex: 1;
+  min-width: 0;
+}
+#asset-compass .ac-detail-head,
+#asset-compass .ac-model-head,
+#asset-compass .ac-trend-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#asset-compass .ac-detail-head {
+  margin: 0 0 14px;
+}
+#asset-compass .ac-detail-head h1 {
+  font-size: 32px;
+  margin-top: 2px;
+  overflow-wrap: anywhere;
+}
+#asset-compass .ac-ticker {
+  font: 12px/1.6 var(--digits);
+  color: var(--muted);
+}
+#asset-compass .ac-analysis {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  overflow: hidden;
+}
+#asset-compass .ac-model {
+  background: linear-gradient(110deg, #173c30, #23372e);
+  color: #ecf2e8;
+  padding: 20px 25px 16px;
+}
+#asset-compass .ac-model-label {
+  font-size: 12px;
+  color: #c0d2bf;
+}
+#asset-compass .ac-model h2 {
+  color: #edf2dc;
+  font-size: 25px;
+  margin-top: 2px;
+}
+#asset-compass .ac-result {
+  text-align: right;
+}
+#asset-compass .ac-result b {
+  display: block;
+  font: 500 30px/1.15 var(--digits);
+  letter-spacing: -1.3px;
+  color: #edf1ce;
+}
+#asset-compass .ac-result small {
+  font-size: 11px;
+  color: #c3d2bd;
+}
+#asset-compass #ac-equation {
+  font-size: 15px;
+  color: #edf2de;
+  margin: 11px 0 13px;
+  line-height: 1.5;
+}
+#asset-compass #ac-factors {
+  display: flex;
+  border-top: 1px solid #c0d0bc44;
+  padding-top: 10px;
+}
+#asset-compass .ac-factor {
+  flex: 1;
+  min-width: 0;
+  padding-right: 10px;
+}
+#asset-compass .ac-factor + .ac-factor {
+  border-left: 1px solid #bed0b633;
+  padding-left: 16px;
+}
+#asset-compass .ac-factor b {
+  display: block;
+  color: #eff4e3;
+  font-size: 13px;
+}
+#asset-compass .ac-factor small {
+  display: block;
+  color: #cbdacc;
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 2px;
+}
+#asset-compass #ac-evaluation {
+  font-size: 12px;
+  line-height: 1.55;
+  color: #d4e0ce;
+  margin-top: 10px;
+}
+#asset-compass .ac-model .ac-pos {
+  color: #ffafa3;
+}
+#asset-compass .ac-model .ac-neg {
+  color: #94e2b2;
+}
+#asset-compass .ac-trend {
+  padding: 17px 25px 14px;
+}
+#asset-compass .ac-trend-head h2 {
+  font-size: 18px;
+}
+#asset-compass .ac-chart-note {
+  color: var(--muted);
+  font: 11px/1.6 var(--digits);
+}
+#asset-compass .ac-readouts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 9px 0 7px;
+}
+#asset-compass .ac-readouts span {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  margin: 0 17px 4px 0;
+}
+#asset-compass .ac-readouts b {
+  font: 600 13px var(--digits);
+  margin-left: 6px;
+}
+#asset-compass .ac-line-key {
+  display: inline-block;
+  width: 18px;
+  height: 0;
+  border-top: 2px solid var(--text);
+  margin-right: 6px;
+}
+#asset-compass .ac-line-key.model {
+  border-top: 2px dashed light-dark(#9a701e, #d8b45f);
+}
+#asset-compass .ac-detail-plot {
+  position: relative;
+  height: 224px;
+}
+#asset-compass #ac-crosshair {
+  width: 100%;
+  margin: 3px 0 5px;
+  accent-color: var(--cta);
+}
+#asset-compass .ac-chart-note {
+  font-family: var(--body-font);
+}
+#asset-compass .ac-pin {
+  margin-top: 10px;
+  color: var(--cta);
+}
+#asset-compass .ac-pin:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+@media (max-width: 980px) {
+  #asset-compass .ac-side {
+    width: 160px;
+    margin-right: 13px;
+  }
+  #asset-compass .ac-model,
+  #asset-compass .ac-trend {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  #asset-compass .ac-factor + .ac-factor {
+    padding-left: 8px;
+  }
+}
+@media (max-width: 700px) {
+  #asset-compass #ac-detail-page {
+    padding-top: 16px;
+  }
+  #asset-compass .ac-detail-layout {
+    display: block;
+  }
+  #asset-compass .ac-side {
+    width: 100%;
+    margin: 0 0 14px;
+    padding: 8px 9px 5px;
+  }
+  #asset-compass .ac-side-head {
+    padding: 1px 4px 6px;
+  }
+  #asset-compass #ac-side-assets {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #asset-compass .ac-side-group {
+    display: contents;
+  }
+  #asset-compass .ac-side-group h3 {
+    display: none;
+  }
+  #asset-compass .ac-side-group button {
+    width: auto;
+    padding: 5px;
+    margin: 0 2px 3px 0;
+  }
+  #asset-compass .ac-side-group small,
+  #asset-compass .ac-side .ac-glyph {
+    display: none;
+  }
+  #asset-compass .ac-side-group button[aria-current='true'] {
+    box-shadow: inset 0 -2px var(--cta);
+  }
+  #asset-compass .ac-detail-head h1 {
+    font-size: 26px;
+  }
+  #asset-compass .ac-detail-head {
+    flex-wrap: wrap;
+  }
+  #asset-compass .ac-trend-head {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  #asset-compass .ac-detail-plot {
+    height: 195px;
+  }
+  #asset-compass .ac-factor small {
+    font-size: 11px;
+  }
+  #asset-compass #ac-factors {
+    flex-wrap: wrap;
+  }
+  #asset-compass #ac-equation {
+    font-size: 13px;
+  }
+  #asset-compass .ac-factor {
+    padding-right: 5px;
+  }
+}
+html,
+body {
+  margin: 0;
+  min-width: 0;
+  color-scheme: light dark;
+  background: light-dark(#f5f5ef, #181f1c);
+}
+#asset-compass {
+  min-height: 100vh;
+}
+#asset-compass a {
+  color: inherit;
+  text-decoration: none;
+}
+#asset-compass .ac-nav a {
+  margin-right: 28px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: var(--muted);
+}
+#asset-compass .ac-nav .ac-nav-current {
+  color: var(--ink);
+}
+#asset-compass .ac-status-button {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 6px 0 6px 12px;
+}
+#asset-compass .ac-source {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.65;
+}
+#asset-compass .ac-source a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+#asset-compass .ac-symbol,
+#asset-compass .ac-model-label {
+  letter-spacing: 0.055em;
+}
+#asset-compass .ac-glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ece7ce;
+  color: #705620;
+  font: 600 12px var(--digits);
+}
+#asset-compass .ac-glyph.fund {
+  background: #e3eaf1;
+  color: #455f7a;
+}
+#asset-compass .ac-pin + .ac-pin {
+  margin-left: 18px;
+}
+#asset-compass .ac-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+  color: var(--muted);
+  font-size: 13px;
+}
+#asset-compass .ac-legend {
+  flex-wrap: wrap;
+}
+#asset-compass .ac-detail-actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#asset-compass .ac-sources {
+  margin-top: 14px;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+#asset-compass .ac-trend-head .ac-periods {
+  margin-left: auto;
+}
+#asset-compass .ac-model details {
+  font-size: 12px;
+  color: #d4e0ce;
+  margin-top: 10px;
+}
+#asset-compass summary {
+  cursor: pointer;
+}
+#asset-compass .ac-amount {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 13px;
+}
+#asset-compass .ac-amount input {
+  width: 96px;
+  border: 1px solid #a6b4a1;
+  background: #274537;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 6px;
+  padding: 2px 6px;
+}
+#asset-compass .ac-annotation {
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+#asset-compass .ac-dialog form button {
+  margin-top: 12px;
+}
+#asset-compass .ac-preset {
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+  border-bottom: 1px solid var(--line);
+  padding: 7px 0;
+  color: var(--text);
+}
+#asset-compass .ac-preset:disabled {
+  color: var(--muted);
+  opacity: 0.6;
+}
+#asset-compass .ac-plot,
+#asset-compass .ac-detail-plot {
+  min-width: 0;
+}
+#asset-compass .ac-plot .ac-empty,
+#asset-compass .ac-detail-plot .ac-empty {
+  height: 100%;
+}
+#asset-compass .ac-list-head {
+  flex-wrap: wrap;
+}
+#asset-compass button:disabled {
+  cursor: default;
+}
+@media (max-width: 640px) {
+  #asset-compass .ac-nav a {
+    padding: 6px 0 8px;
+    margin-right: 24px;
+  }
+  #asset-compass .ac-snapshot {
+    font-size: 11px;
+  }
+  #asset-compass .ac-detail-head .ac-periods {
+    margin-top: 5px;
+  }
+  #asset-compass .ac-model-head {
+    align-items: flex-start;
+  }
+  #asset-compass .ac-result b {
+    font-size: 24px;
+  }
+  #asset-compass .ac-chart-note {
+    line-height: 1.7;
+  }
+}
+#asset-compass .ac-line-key:not(.model) {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--up) 50%, var(--down) 50%);
+}
+#asset-compass .ac-model details[open] p {
+  margin-top: 7px;
+}
