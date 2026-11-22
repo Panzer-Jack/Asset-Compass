@@ -1,6 +1,6 @@
 # 资产罗盘 · Asset Compass
 
-供个人在本机使用的人民币资产观察台。总览比较关注资产的区间表现，详情按标的展示行情、观察公式和可回看的历史结果。技术栈为 Vue 3、Nuxt、TypeScript、Node.js 和 SQLite。
+资产罗盘是老船长PZ.Jack 的个人量化观测台。总览比较关注资产的区间表现，详情按标的展示行情、观察公式和可回看的历史结果。技术栈为 Vue 3、Nuxt、TypeScript、Node.js 和 SQLite。
 
 ## 运行
 
